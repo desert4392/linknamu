@@ -11,7 +11,12 @@ export default function Home() {
         <ThemeToggle />
       </div>
 
-      <ProfileHeader name={profile.name} bio={profile.bio} avatar={profile.avatar} />
+      <ProfileHeader
+        name={profile.name}
+        bio={profile.bio}
+        avatar={profile.avatar}
+        avatarPosition={profile.avatarPosition}
+      />
 
       <ul className="mt-8 flex w-full max-w-xs flex-col gap-4">
         {profile.links.map((link) => (

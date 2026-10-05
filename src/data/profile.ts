@@ -10,14 +10,18 @@ export type Profile = {
   bio: string;
   /** public/ 기준 경로. 비워두면 이름 첫 글자로 대체 */
   avatar?: string;
+  /** 원형 영역에 보일 사진 위치(CSS object-position). 기본값 가운데 */
+  avatarPosition?: string;
   links: LinkItem[];
 };
 
 // TODO: 보여 주기용 더미 값. 실제 사진·주소·설명으로 교체
 export const profile: Profile = {
-  name: "이원진",
-  bio: "세계 최강 바이브코드",
-  avatar: "/avatar-placeholder.svg",
+  name: "이개발",
+  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  avatar: "/profile.jpg",
+  // 세로 사진이라 가운데를 자르면 발이 잘리므로 아래쪽에 맞춰 전신이 들어오게 한다
+  avatarPosition: "center bottom",
   links: [
     {
       id: "github",
