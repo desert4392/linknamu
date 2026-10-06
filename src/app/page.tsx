@@ -1,6 +1,6 @@
 import { profile } from "@/data/profile";
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
@@ -18,13 +18,7 @@ export default function Home() {
         avatarPosition={profile.avatarPosition}
       />
 
-      <ul className="mt-8 flex w-full max-w-xs flex-col gap-4">
-        {profile.links.map((link) => (
-          <li key={link.id}>
-            <LinkCard link={link} />
-          </li>
-        ))}
-      </ul>
+      <LinkList links={profile.links} />
     </main>
   );
 }
